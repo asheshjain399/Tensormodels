@@ -17,7 +17,7 @@ class ReaderClass:
   def __init__(self, augment_classes):
     """
     Args
-      augment_classes: list of data augmentation classes  (i.e., utils/data_augment.py). Each element of this list performs a sequence of data of augmentation.
+      augment_classes: list of data augmentation classes  (i.e., utils/augmentation_wrapper.py). Each element of this list performs a sequence of data of augmentation.
     """
 
     self.augment_classes = augment_classes
