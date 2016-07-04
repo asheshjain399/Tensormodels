@@ -19,28 +19,28 @@ class DataFeeder():
   def __init__(self,
                data_file, # Each line of data file is a data instnance.
                label_file, # Each line of label file is a label training instance.
-               readerClass,  # This is a class which defines how to decode the data and label instances and Y. For an example see multi_class_data_reader.py for multi label image clasification.
+               reader_handle,  # This is a class which defines how to decode the data and label instances and Y. For an example see multi_class_data_reader.py for multi label image clasification.
                data_list_shapes, # This is list of shapes of the data
                label_list_shapes, # This is list of shapes for labels
-               batch_size=32,
+               batch_size=32, # Number of examples in each batch
                num_preprocess_threads=int(0.3 * mp.cpu_count()),
                num_gpu_towers=1,
                num_epochs=-1,
-               dataType=np.uint8, # This is dtype of each tensor in data_list_shapes. TODO: Make this a list of dtypes
-               labelType=np.int32 # This is dtype of each tensor in label_list_shapes. TODO: Make this a list of dtypes
+               data_type=np.uint8, # This is dtype of each tensor in data_list_shapes. TODO: Make this a list of dtypes
+               label_type=np.int32 # This is dtype of each tensor in label_list_shapes. TODO: Make this a list of dtypes
                ):
 
     self.data_file = data_file
     self.label_file = label_file
     self.data_list_shapes = data_list_shapes
     self.label_list_shapes = label_list_shapes
-    self.readerClass = readerClass
+    self.reader_handle = reader_handle
     self.num_preprocess_threads = num_preprocess_threads
     self.num_gpu_towers = num_gpu_towers
     self.batch_size = batch_size
     self.num_epochs = num_epochs
-    self.dataType = dataType
-    self.labelType = labelType
+    self.data_type = data_type
+    self.label_type = label_type
     self._launch_pipeline()
 
   def _launch_pipeline(self):
@@ -78,13 +78,13 @@ class DataFeeder():
       batch_data_holder = []
       for s in self.data_list_shapes:
         batch_data_holder.append(np.repeat(
-          np.expand_dims(np.zeros(s, dtype=self.dataType), axis=0),
+          np.expand_dims(np.zeros(s, dtype=self.data_type), axis=0),
           self.batch_size, axis=0))
 
       batch_label_holder = []
       for s in self.label_list_shapes:
         batch_label_holder.append(np.repeat(
-          np.expand_dims(np.zeros(s, dtype=self.labelType), axis=0),
+          np.expand_dims(np.zeros(s, dtype=self.label_type), axis=0),
           self.batch_size, axis=0))
 
       # For each example in mini-batch
@@ -94,7 +94,7 @@ class DataFeeder():
         [image_path, label_path] = self.filename_queue.get()
 
         # Read the data and label at the image_path and label_path, respectively
-        batch_data_list, label_data_list, _, _ = self.readerClass.reader(image_path, label_path)
+        batch_data_list, label_data_list, _, _ = self.reader_handle.reader(image_path, label_path)
 
         for j in range(len(batch_data_list)):
           _data = batch_data_list[j]
