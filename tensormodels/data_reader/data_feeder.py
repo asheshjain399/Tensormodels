@@ -64,7 +64,7 @@ class DataFeeder():
 
     print 'Data feeder started'
     for each_worker in range(self.num_preprocess_threads):
-      p = Process(target=self._each_worker_process, args=(self.data_queue))
+      p = Process(target=self._each_worker_process, args=(self.data_queue,))
       p.start()
       self.data_processes.append(p)
 

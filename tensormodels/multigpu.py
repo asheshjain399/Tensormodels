@@ -81,7 +81,6 @@ class MultiGPU:
             batchnorm_updates = tf.get_collection(ops.UPDATE_OPS_COLLECTION, scope)
 
           grads = self.opt.compute_gradients(loss)
-
           tower_grads.append(grads)
 
     # Average gradient from the GPUs. This is where GPUs synchronization happens. 

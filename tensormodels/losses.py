@@ -176,3 +176,29 @@ def cross_entropy_loss(logits, one_hot_labels, label_smoothing=0,
     loss = tf.mul(weight, tf.reduce_mean(cross_entropy), name='value')
     tf.add_to_collection(LOSSES_COLLECTION, loss)
     return loss
+
+
+def sparse_cross_entropy_loss(logits, labels,
+                       weight=1.0, scope=None):
+  """Define a Cross Entropy loss using sparse_softmax_cross_entropy_with_logits.
+
+  It can scale the loss by weight factor, and smooth the labels.
+
+  Args:
+    logits: [batch_size, num_classes] logits outputs of the network .
+    labels: [batch_size,] target labels.
+    weight: scale the loss by this factor.
+    scope: Optional scope for op_scope.
+
+  Returns:
+    A tensor with the softmax_cross_entropy loss.
+  """
+  with tf.op_scope([logits, labels], scope, 'SparseCrossEntropyLoss'):
+    cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(logits,labels,name='xentropy')
+    weight = tf.convert_to_tensor(weight,
+                                    dtype=logits.dtype.base_dtype,
+                                    name='loss_weight')
+
+    loss = tf.mul(weight, tf.reduce_mean(cross_entropy), name='value')
+    tf.add_to_collection(LOSSES_COLLECTION, loss)
+    return loss

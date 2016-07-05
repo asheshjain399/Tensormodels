@@ -1,4 +1,3 @@
-import tensormodels.utils.image_augmentation as augment
 import numpy as np
 from numpy.random import RandomState
 rand = RandomState(123)
@@ -9,7 +8,7 @@ class AugmentationWrapper:
   def __init__(self,
                augment_ops=None,
                augment_vals=None,
-               ops_func_holder=augment,
+               ops_func_holder=None,
                shuffle_ops=False):
     """
     augment_ops: List of augment ops

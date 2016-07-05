@@ -2,15 +2,13 @@
 Author: Ashesh Jain [asheshjain399@gmail.com]
 MIT License
 """
-
-import cv2
 import numpy as np
 from numpy.random import RandomState
 rand = RandomState(123)
 
 
 class ReaderClass:
-  """The readerClass implements how to read the data and label. It also performs data augmentation as specified by the user.
+  """The readerClass returns a dummy (299,299,3) image and a random image label [0,1000)
 
   readerClass must implement the reader() method. This method is called by the data_feeder.py in order to populate the data_queue"""
 
@@ -67,9 +65,7 @@ def _data_reader(img_path):
   Args:
     img_path: Path where the image is located.
   """
-  #img = cv2.imread(img_path)
-  #return img
-  #return np.zeros((400,400,3),dtype=np.uint8)
+
   return (150.0*rand.rand(400,400,3)).astype(np.uint8)
 
 def _label_reader(label_path):
@@ -77,5 +73,4 @@ def _label_reader(label_path):
   Args:
     label_path: this is simply the image class label.
   """
-  #return [np.array([int(label_path)])]
-  return [rand.randint(0,10)]
+  return [rand.randint(0,1000)]
