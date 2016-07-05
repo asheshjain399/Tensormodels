@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640a7a73-7820-4d70-8ce5-6543c2175e25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/example_train.py" afterPath="$PROJECT_DIR$/example/example_train.py" />
     </list>
     <ignored path="Tensormodels.iws" />
@@ -25,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
@@ -97,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example_train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="example_train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/example_train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="668">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+              <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
               <folding>
                 <element signature="e#193#204#0" expanded="true" />
               </folding>
@@ -141,8 +139,8 @@
         <option value="$PROJECT_DIR$/tensormodels/data_reader/example_multi_class_data_reader.py" />
         <option value="$PROJECT_DIR$/example/train.py" />
         <option value="$PROJECT_DIR$/tensormodels/models/inception.py" />
-        <option value="$PROJECT_DIR$/example/example_train.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/example/example_train.py" />
       </list>
     </option>
   </component>
@@ -871,16 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/example_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="e#193#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tensormodels/data_reader/multi_class_data_reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -908,6 +896,16 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/example_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="63" column="83" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
+          <folding>
+            <element signature="e#193#204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
