@@ -215,9 +215,6 @@ def train():
         y = data[1].reshape((data[1].shape[0],))
         data_list = [data[0], y]
 
-        print data[0].shape
-        print y.shape
-        
         # Run a training iteration
         start_time = time.time()
         network_handle.train_func(train_op, data_list, sess)
