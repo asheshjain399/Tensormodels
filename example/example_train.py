@@ -61,7 +61,7 @@ SUMMARY_EVERY = 50
 SAVE_EVERY = 1000
 
 # Device setting
-GPU_IDS = ['1']
+GPU_IDS = ['1'] # List of GPUs.
 VARIABLES_ON_DEVICE = '/cpu:0'
 
 
