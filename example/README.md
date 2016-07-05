@@ -29,7 +29,7 @@ def _tower_loss(scope):
   return total_loss, input_var_names, keep_log
 ```
 
-`_tower_loss` must return `total_loss, input_var_names, keep_log`. In order to train of multiple GPUs, initialize `MultiGPU` class.
+`_tower_loss` must return `total_loss, input_var_names, keep_log`. In order to train of multiple GPUs, initialize `MultiGPU` class in `example_train.py`.
 
 ```shell
 

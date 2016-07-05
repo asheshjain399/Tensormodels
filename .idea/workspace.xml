@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/example/example_train.py" description="&#10;    # Build the network on GPU_IDS&#10;    network_ha..." line="148" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="640a7a73-7820-4d70-8ce5-6543c2175e25" name="Default" comment="" />
+    <list default="true" id="640a7a73-7820-4d70-8ce5-6543c2175e25" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/README.md" afterPath="$PROJECT_DIR$/example/README.md" />
+    </list>
     <ignored path="Tensormodels.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,13 +44,13 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/README.md">
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="776">
-                <caret line="62" column="82" selection-start-line="62" selection-start-column="82" selection-end-line="62" selection-end-column="82" />
+              <first_editor relative-caret-position="251">
+                <caret line="31" column="152" selection-start-line="31" selection-start-column="152" selection-end-line="31" selection-end-column="152" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -942,13 +944,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/README.md">
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="776">
-            <caret line="62" column="82" selection-start-line="62" selection-start-column="82" selection-end-line="62" selection-end-column="82" />
+          <first_editor relative-caret-position="251">
+            <caret line="31" column="152" selection-start-line="31" selection-start-column="152" selection-end-line="31" selection-end-column="152" />
             <folding />
           </first_editor>
           <second_editor />
